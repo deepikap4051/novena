@@ -59,6 +59,11 @@ p {
 .navbar-toggle .icon-bar {
   background: #913870;
 }
+/* header */
+a.app { display: contents;}
+nav#navbar {position: absolute; z-index: 999;background: #ffffffbd;  width: 100%;}
+.overlay {position: relative;}
+/* header */
 
 input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
   box-shadow: none;
@@ -465,11 +470,11 @@ a:focus {
   position: relative;
 }
 
-.banner {
+.slider {
   position: relative;
   overflow: hidden;
   background: #fff;
-  background: url("../images/bg/slider-bg-1.jpg") no-repeat;
+  /* background: url("../images/bg/slider-bg-1.jpg") no-repeat; */
   background-size: cover;
   min-height: 550px;
 }
@@ -643,7 +648,7 @@ a:focus {
 
 .counter-stat i {
   display: block;
-  color: rgba(255, 255, 255, 0.06);
+  color: rgb(255 255 255 / 43%);
   font-size: 70px;
   position: absolute;
   left: 0px;
@@ -836,8 +841,7 @@ a:focus {
   top: 0px;
   width: 100%;
   height: 100%;
-  background: rgba(34, 58, 102, 0.95);
-}
+  background: rgb(145 56 112 / 84%);}
 
 .mb-30 {
   margin-bottom: 30px;
@@ -1497,150 +1501,124 @@ a:focus {
 
 /*# sourceMappingURL=maps/style.css.map */
 /* slidercss Swiss Beauty Stain Matte Lipstick | Long Lasting, Hydrating & Lightweight Lipstick | Bare , 3.4gm|*/
-header .item {
+/*******************slider home page***********************/
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Indie Flower', cursive;
+}
+
+.slider {
   height: 100vh;
+  width: 100%;
   position: relative;
+  margin: auto;
 }
-header .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+  .slide {
+    display: none;
+    height: 100%;
+    width: 100%;
+  }
+    img {
+      height: 100%;
+      width: 100%;
+      filter: contrast(90%);
+      object-fit: cover;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 22px;
+      color: #fff;
+      padding: 8px 16px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 4px;
+    }
+  
+
+  a.prev,
+  a.next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    color: #ffffff;
+    padding: 12px;
+    transition: 0.2s;
+  }
+
+  .next {
+    right: 20px;
+  }
+  .prev {
+    left: 20px;
+  }
+
+
+.show {
+  animation: fade 0.5s ease-out;
 }
-header .item .cover {
-  padding: 75px 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
-header .item .cover .header-content {
-  position: relative;
-  padding: 56px;
-  overflow: hidden;
+
+a.prev {
+    background: #ff000000;
+    border: 1px solid #913870;
+    border-radius: 93px;
+    padding: 2px 21px;
 }
-header .item .cover .header-content .line {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  border: 9px solid #fff;
-  -webkit-clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
-  clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+a.next {
+  background: #ff000000;
+  border: 1px solid #913870;
+  border-radius: 93px;
+  padding: 2px 21px;
 }
-header .item .cover .header-content h2 {
-  font-weight: 300;
-  font-size: 35px;
+/***********************end sider**************************/
+
+.top-bar-info li a {
   color: #fff;
+  margin-right: -5px!important;
 }
-header .item .cover .header-content h1 {
-  font-size: 56px;
-  font-weight: 600;
-  margin: 5px 0 20px;
-  word-spacing: 3px;
-  color: #fff;
+ul.top-bar-info.list-inline-item.pl-0.mb-0 {
+  font-size: 12px;
+  margin: -20px;
 }
-header .item .cover .header-content h4 {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 36px;
-  color: #fff;
+li.list-inline-item:hover {
+  color: #e9948e;
+  transition: all .35s ease;
 }
-header .owl-item.active h1 {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-name: fadeInDown;
-  animation-delay: 0.3s;
+li.list-inline-item a:hover {
+  color: #e9948e;
+  transition: all .35s ease;
 }
-header .owl-item.active h2 {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-name: fadeInDown;
-  animation-delay: 0.3s;
-}
-header .owl-item.active h4 {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-name: fadeInUp;
-  animation-delay: 0.3s;
-}
-header .owl-item.active .line {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-name: fadeInLeft;
-  animation-delay: 0.3s;
-}
-header .owl-nav .owl-prev {
-  position: absolute;
-  left: 15px;
-  top: 43%;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-  background: rgba(0, 0, 0, 0.5) !important;
-  width: 40px;
-  cursor: pointer;
-  height: 40px;
-  position: absolute;
-  display: block;
-  z-index: 1000;
-  border-radius: 0;
-}
-header .owl-nav .owl-prev span {
-  font-size: 1.6875rem;
-  color: #fff;
-}
-header .owl-nav .owl-prev:focus {
-  outline: 0;
-}
-header .owl-nav .owl-prev:hover {
-  background: #000 !important;
-}
-header .owl-nav .owl-next {
-  position: absolute;
-  right: 15px;
-  top: 43%;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-  background: rgba(0, 0, 0, 0.5) !important;
-  width: 40px;
-  cursor: pointer;
-  height: 40px;
-  position: absolute;
-  display: block;
-  z-index: 1000;
-  border-radius: 0;
-}
-header .owl-nav .owl-next span {
-  font-size: 1.6875rem;
-  color: #fff;
-}
-header .owl-nav .owl-next:focus {
-  outline: 0;
-}
-header .owl-nav .owl-next:hover {
-  background: #000 !important;
-}
-header:hover .owl-prev {
+/******************************/
+.mobile-topbar {
+  background-color: #37b5a8;
+  color: white;
+  position: fixed;
+  top: 0px;
   left: 0px;
-  opacity: 1;
-}
-header:hover .owl-next {
-  right: 0px;
-  opacity: 1;
+  z-index: 3;
+  font-size: 16px;
+  line-height: 50px;
+  padding-left: 15px;
+  width: 100%;
+  height: 50px;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
